@@ -2,4 +2,4 @@
   <div>
   
   </div>
-`;setupCounter(document.querySelector("#counter"));
+`;
