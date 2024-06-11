@@ -93,5 +93,7 @@ const server = http.createServer((req, res) => {
 	}
 });
 
-server.listen(3002);
-console.log(`Json Server running on port ${3002}`);
+const PORT = process.env.PORT || 3002;
+server.listen(PORT, () => {
+	console.log(`Server running on port ${PORT}`);
+});
