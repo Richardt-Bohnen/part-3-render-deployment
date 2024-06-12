@@ -60,7 +60,6 @@ app.post('/api/persons', (request, response) => {
 
 	logger(request, response, function (err) { // morgan
 
-
 		if (!newPerson.name) {
 			response.status(400).send({ error: "no name given" });
 			return;
