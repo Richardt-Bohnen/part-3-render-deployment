@@ -21,7 +21,6 @@ const password = process.argv[2]
 const newPersonName = process.argv[3]
 const newPersonNumber = process.argv[4]
 
-// const url = `mongodb+srv://richardtbohnen:${password}@cluster0.sdrvhoa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 const url = process.env.MONGODB_URI
 
 console.log("- connected to :>> ", url)
@@ -36,16 +35,23 @@ mongoose.connect(url)
 		console.log("- error connecting to MongoDB :>> ", error.message)
 	})
 
+// id: String,
 const personSchema = new mongoose.Schema({
-	id: Number,
 	name: String,
 	number: String
+})
+
+personSchema.set('toJSON', {
+	transform: (document, returnedObject) => {
+		returnedObject.id = returnedObject._id.toString()
+		delete returnedObject._id
+		delete returnedObject.__v
+	}
 })
 
 const Person = mongoose.model('Person', personSchema)
 
 const person = new Person({
-	id: Math.round(Math.random() * 10000000),
 	name: `${newPersonName}`,
 	number: `${newPersonNumber}`
 })
