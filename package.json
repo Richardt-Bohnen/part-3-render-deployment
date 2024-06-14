@@ -1,7 +1,8 @@
 {
 	"name": "part-3-9",
 	"version": "1.0.0",
-	"main": "./dist/index.js",
+	"main": "index.js",
+	"type": "module",
 	"scripts": {
 		"dev": "nodemon index.js",
 		"start": "node index.js",
