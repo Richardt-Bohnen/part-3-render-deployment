@@ -8,7 +8,7 @@ var morgan = require('morgan')
 var finalhandler = require('finalhandler')
 const cors = require('cors')
 const mongoose = require('mongoose')
-const Person = require('./models/people.js')
+const Person = require('./models/persons.js')
 
 // #endregion Imports
 // --------------------------------------------------
