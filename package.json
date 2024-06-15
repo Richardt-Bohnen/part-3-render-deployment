@@ -9,6 +9,7 @@
 	},
 	"dependencies": {
 		"axios": "^1.7.2",
+		"cjs-loader": "^0.1.0",
 		"common": "^0.2.5",
 		"cors": "^2.8.5",
 		"debug": "^4.3.5",
