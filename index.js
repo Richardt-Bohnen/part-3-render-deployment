@@ -9,7 +9,7 @@ var finalhandler = require('finalhandler')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const Person = require('./models/persons.js')
-const common = require('common')
+const common = require('common.min.js')
 
 // #endregion Imports
 // --------------------------------------------------
